@@ -12,6 +12,7 @@ pin = 15
 # initialize GPIO
 GPIO.setwarnings(False)
 
+
 # Excitation Voltage
 def output_fromGPIO(pin, output):
     GPIO.setmode(GPIO.BOARD)
@@ -19,33 +20,34 @@ def output_fromGPIO(pin, output):
     GPIO.output(pin, output)
     sleep(0.1)
 
+
 def get_temperature():
     try:
-        output_fromGPIO(pin,True)
+        output_fromGPIO(pin, True)
         _, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT11, 4)
         return temperature
     finally:
-        output_fromGPIO(pin,False)
+        output_fromGPIO(pin, False)
+
 
 def get_humidity():
     try:
-        output_fromGPIO(pin,True)
+        output_fromGPIO(pin, True)
         humidity, _ = Adafruit_DHT.read_retry(Adafruit_DHT.DHT11, 4)
         return humidity
     finally:
-        output_fromGPIO(pin,False)
+        output_fromGPIO(pin, False)
 
 
 def get_moisture():
     try:
         ADC0832.setup()
-        output_fromGPIO(pin,True)
+        output_fromGPIO(pin, True)
         while True:
             moisture = ADC0832.getResult(0)
             if moisture != -1:
                 return moisture
             sleep(1)
-
     except:
         ADC0832.destroy()
     finally:
@@ -69,7 +71,7 @@ def get_light():
 
 class CheckHumidity(object):
 
-    def on_get(self, req, resp):
+    def on_get(self, _, resp):
         msg = {
             "key": "humidity",
             "value": get_humidity()
@@ -78,7 +80,7 @@ class CheckHumidity(object):
 
 
 class CheckTemperature(object):
-    def on_get(self, req, resp):
+    def on_get(self, _, resp):
         msg = {
             "key": "temperature",
             "value": get_temperature()
@@ -87,7 +89,7 @@ class CheckTemperature(object):
 
 
 class CheckMoisture(object):
-    def on_get(self, req, resp):
+    def on_get(self, _, resp):
         msg = {
             "key": "moisture",
             "value": get_moisture()
@@ -96,7 +98,7 @@ class CheckMoisture(object):
 
 
 class CheckLight(object):
-    def on_get(self, req, resp):
+    def on_get(self, _, resp):
         msg = {
             "key": "light",
             "value": get_light()
