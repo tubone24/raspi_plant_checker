@@ -4,6 +4,10 @@
 
 ## Background
 
+I grow a banyan tree at home, but I forgot to water it and almost died.
+
+To prevent such a mistake, I have created a module that automatically measures the timing of watering.
+
 ## Install
 
 ### Setup
