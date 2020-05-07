@@ -47,6 +47,10 @@ sudo python3 setup.py install
 pip3 install -r requirements.txt
 ```
 
+### Setup for sensors
+
+![img](./docs/images/breadboard.png)
+
 ## Usage
 
 ```
