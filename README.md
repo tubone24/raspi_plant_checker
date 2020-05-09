@@ -146,6 +146,22 @@ Response
 }
 ```
 
+### Use with Zabbix
+
+If you use Zabbix, you can collect metrics for external scripts.
+
+- First, set `collect_zabbix.sh` to Zabbix's external scripts.
+
+```
+git clone https://github.com/tubone24/raspi_plant_checker.git
+cp raspi_plant_checker/src/collect_zabbix.sh /usr/lib/xabbix/externalscripts/
+chmod +x /usr/lib/xabbix/externalscripts/collect_zabbix.sh
+```
+
+- Load Temprate `zbx_export_templates_plant_checker.xml`
+
+![img](./docs/images/zabbix1.png)
+
 ## Demo
 
 Setup my Raspberry PI and check my banyan!
