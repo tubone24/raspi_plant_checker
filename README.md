@@ -51,6 +51,27 @@ pip3 install -r requirements.txt
 
 ### Setup for sensors
 
+- A/D
+  - CS: Pin 11
+  - CLK: Pin 12
+  - DI/DO: Pin 13
+  - VCC: Pin 15
+  - GND: GND
+- YL-69
+  - VCC: Pin15
+    - When power is applied constantly, electrolysis will occur and the sensor will rust.(not use 5v/3.3v)
+  - Data: A/D(CH0)
+  - GND: GND
+- DHT11
+  - VCC: 5v or Pin15
+  - Data: Pin7
+  - GND: GND
+- Photoresistor
+  - VCC: 5v
+  - Data: A/D(CH1) with 10kΩ Resist
+  - GND: GND
+
+
 ![img](./docs/images/breadboard.png)
 
 ![img](./docs/images/IMG_2075.jpg)
