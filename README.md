@@ -84,6 +84,68 @@ Enter command below, run API server.
 python3 main.py
 ```
 
+### API Reference
+
+#### Get temperature
+
+```
+- GET /temperature
+```
+
+Response
+
+```
+{
+    "key": "temperature",
+    "value": 20.2
+}
+```
+
+#### Get humidity
+
+```
+- GET /humidity
+```
+
+Response
+
+```
+{
+    "key": "humidity",
+    "value": 60.5
+}
+```
+
+#### Get light
+
+```
+- GET /light
+```
+
+Response
+
+```
+{
+    "key": "light",
+    "value": 175
+}
+```
+
+#### Get moisture
+
+```
+- GET /moisture
+```
+
+Response
+
+```
+{
+    "key": "moisture",
+    "value": 0
+}
+```
+
 ## Demo
 
 Setup my Raspberry PI and check my banyan!
