@@ -53,6 +53,8 @@ pip3 install -r requirements.txt
 
 ![img](./docs/images/breadboard.png)
 
+![img](./docs/images/IMG_2075.jpg)
+
 ## Usage
 
 Enter command below, run API server.
@@ -60,3 +62,9 @@ Enter command below, run API server.
 ```
 python3 main.py
 ```
+
+## Demo
+
+Setup my Raspberry PI and check my banyan!
+
+![img](./docs/images/IMG_6307.jpg)
