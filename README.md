@@ -166,6 +166,8 @@ chmod +x /usr/lib/xabbix/externalscripts/collect_zabbix.sh
   - IPADDR: your Raspi IP
   - PORT: default 8000
   
+![img](./docs/images/zabbix2.png)
+  
 - Enjoy collect metrics and show graphs!
 
 ![inmg](./docs/images/zabbix3.png)
