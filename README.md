@@ -158,9 +158,14 @@ cp raspi_plant_checker/src/collect_zabbix.sh /usr/lib/xabbix/externalscripts/
 chmod +x /usr/lib/xabbix/externalscripts/collect_zabbix.sh
 ```
 
-- Load Temprate `zbx_export_templates_plant_checker.xml`
+- Import Temprate `zbx_export_templates_plant_checker.xml`
 
 ![img](./docs/images/zabbix1.png)
+
+- Create a new host with the template and set macro.
+  - IPADDR: your Raspi IP
+  - PORT: default 8000
+![inmg](./docs/images/zabbix2.png)
 
 ## Demo
 
