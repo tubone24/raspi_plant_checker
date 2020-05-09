@@ -2,6 +2,8 @@
 
 ![img](./docs/images/plant_checker.png)
 
+> Houseplant management system using Raspberry PI
+
 ## Background
 
 I grow a banyan tree at home, but I forgot to water it and almost died.
@@ -52,6 +54,8 @@ pip3 install -r requirements.txt
 ![img](./docs/images/breadboard.png)
 
 ## Usage
+
+Enter command below, run API server.
 
 ```
 python3 main.py
