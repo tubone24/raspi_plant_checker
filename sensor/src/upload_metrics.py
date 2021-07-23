@@ -6,7 +6,7 @@ import os
 from os.path import join, dirname
 from dotenv import load_dotenv
 
-dotenv_path = join(dirname(__file__), "../", '.env')
+dotenv_path = join(dirname(__file__), "../../", '.env')
 load_dotenv(dotenv_path)
 
 RASPI_URL = os.environ.get("RASPI_URL")
@@ -89,7 +89,6 @@ def main():
     metrics = get_metrics(RASPI_URL)
     upload_metric_to_hasura(moisture=metrics["moisture"], light=metrics["light"])
     delete_old_metrics_to_hasura()
-
 
 
 if __name__ == "__main__":
